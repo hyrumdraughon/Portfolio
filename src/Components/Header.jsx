@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledHeader = styled.header`
@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
     color: white;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: white;
     &:hover {
@@ -30,9 +30,9 @@ const Header = () => {
     return (
         <StyledHeader>
             <span style={{ fontSize: 40 }}>Hyrum Draughon</span>
-            <StyledLink to='/portfolio'>Portfolio</StyledLink>
-            <StyledLink to='/resume'>Resume</StyledLink>
-            <StyledLink to='/aboutme'>About Me</StyledLink>
+            <StyledLink to='/portfolio' activeStyle={{fontWeight:"bolder", textDecoration:"underline", color:"#62C6F2"}}>Portfolio</StyledLink>
+            <StyledLink to='/resume' activeStyle={{fontWeight:"bold", textDecoration:"underline", color:"#62C6F2"}}>Resume</StyledLink>
+            <StyledLink to='/aboutme' activeStyle={{fontWeight:"bold", textDecoration:"underline", color:"#62C6F2"}}>About Me</StyledLink>
         </StyledHeader>
     )
 }
